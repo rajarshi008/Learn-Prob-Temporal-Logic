@@ -20,6 +20,7 @@ cd spot-x.y.z
 ./configure --prefix=$(python -c "import sys; print(sys.prefix)") --with-python
 make -j$(sysctl -n hw.ncpu) && make install
 ```
+
 You also need to add SPOT Python Bindings to the Python path. One way to do this (for MacOS) is to run: 
 ```
 export PYTHONPATH=/opt/homebrew/lib/python3.X/site-packages/:$PYTHONPATH
@@ -32,7 +33,7 @@ export PATH="$PATH:/Users/user/Desktop/prism/prism/bin"
 
 ### Running PriTL
 
-To run a experiments with the default parameters presented in the paper, use the command:
+To run experiments with the default parameters presented in the paper, use the command:
 ```
 python3 main.py 
 ```
