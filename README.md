@@ -26,14 +26,27 @@ You also need to add SPOT Python Bindings to the Python path. One way to do this
 export PYTHONPATH=/opt/homebrew/lib/python3.X/site-packages/:$PYTHONPATH
 ```
 
-To install PRISM, first unzip prism-master.zip. Then, follow the installation instructions as given in the README.md inside. Remember to add the prism binary to the path, e.g., as follows:
+Please access and install from the forked version of PRISM
+```
+https://github.com/yashpote/prism
+```
+Then, follow the installation instructions as given in the README.md inside. Remember to add the prism binary to the path, e.g., as follows:
 ```
 export PATH="$PATH:/Users/user/Desktop/prism/prism/bin"
 ```
 
-### Running PriTL
+### 3. Run PriTL
+Use the following command to run PriTL with the desired parameters:
+```bash
+python3 main.py --experiment <experiment_type> --num_processes <num_processes> [--compile] [--run_all] [--nailgun]
+```
 
-To run experiments with the default parameters presented in the paper, use the command:
-```
-python3 main.py 
-```
+### 4. Command-Line Arguments
+- `--experiment` (`-e`): The type of experiment to run. Options:
+  - `diff_tasks`: Learning from strategies generated from correct and incorrect tasks.
+  - `same_task`: Learning from optimal and suboptimal strategies from the same task.
+  - `variants`: Learning from variants of the probabilistic protocol EGL.
+- `--num_processes` (`-p`): Number of processes to run in parallel (default: 1).
+- `--compile` (`-c`): Compile the results into a CSV file (optional).
+- `--run_all` (`-a`): Run all experiments (optional, computationally expensive).
+- `--nailgun` (`-ng`): Use the Nailgun server for PRISM (optional, faster).
