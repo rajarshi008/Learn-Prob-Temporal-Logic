@@ -4,7 +4,7 @@ PriTL is a tool that identifies the differences in Markov Chains using Probabili
 
 ### Getting Started
 
-PriTL requires [Python3.12+](https://www.python.org/downloads/), and some Python libaries. PriTL also requires the installation of [SPOT](https://spot.lre.epita.fr/) and [PRISM](https://www.prismmodelchecker.org/). Note that we have modified the PRISM source to suit our purposes, so we provide our customized version along with the supplementary material.
+PriTL requires [Python3.12+](https://www.python.org/downloads/), and some Python libaries. PriTL also requires the installation of [SPOT](https://spot.lre.epita.fr/) and [PRISM](https://www.prismmodelchecker.org/). Note that we have modified the PRISM source to suit our purposes, so we rely on a forked version of PRISM. We now give the steps of the installation process.
 
 Start by creating a virtual environment and installing the required python libraries
 ```
