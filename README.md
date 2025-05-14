@@ -18,13 +18,14 @@ To install SPOT, first download the SPOT compressed repository from their websit
 tar -xvzf spot-x.y.z.tar.gz
 cd spot-x.y.z
 ./configure --prefix=$(python -c "import sys; print(sys.prefix)") --with-python
-make -j$(sysctl -n hw.ncpu) && make install
+make -j$(sysctl -n hw.ncpu) && sudo make install
 ```
 
 You also need to add SPOT Python Bindings to the Python path. One way to do this (for MacOS) is to run: 
 ```
-export PYTHONPATH=/opt/homebrew/lib/python3.X/site-packages/:$PYTHONPATH
+export PYTHONPATH=~/.local/lib/python3.X/site-packages:$PYTHONPATH
 ```
+where you replace X with python version
 
 Please access and install from the forked version of PRISM
 ```
